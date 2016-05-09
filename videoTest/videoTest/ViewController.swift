@@ -30,7 +30,7 @@ class ViewController: UIViewController {
       
       //fetch screenshot for the video
       dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-         let image = self.getPreviewImageForVideoAtURL(NSURL(string: "http://download.prashantmangukiya.com/SwiftVideoPlayer-Data/Big_Buck_Bunny_Trailer.m4v")!, atInterval: 5)
+         let image = self.getPreviewImageForVideoAtURL(NSURL(string: "http://techslides.com/demos/sample-videos/small.mp4")!, atInterval: 5)
          dispatch_async(dispatch_get_main_queue(), {
             imageView.image = image
             });
@@ -50,7 +50,7 @@ class ViewController: UIViewController {
    }
    
    func tapped() {
-      let url = NSURL(string: "http://download.prashantmangukiya.com/SwiftVideoPlayer-Data/Big_Buck_Bunny_Trailer.m4v")
+      let url = NSURL(string: "http://techslides.com/demos/sample-videos/small.mp4")  //url for remote url
       let avc = AVPlayerViewController()
       avc.player = AVPlayer(URL: url!)
       self.presentViewController(avc, animated: true) {
